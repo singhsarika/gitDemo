@@ -1,0 +1,262 @@
+body{
+	 margin: 0;
+    padding: 0;
+    width: 100%;
+	background: #efeded;
+}
+.wraperHeaser {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+	    width: 100%;
+}
+.accdeminImg:first-child{
+	border-right:1px solid #ccc;
+}
+.containtWraper {
+    margin: 0 auto;
+    width: 80%;
+}
+.accdeminField {
+    background: #fff;
+    overflow: hidden;
+	width:100%;
+}
+.leftImgDetails>.accdeminField{
+	margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.accdeminField:hover{
+    border: 1px solid #d7d1d1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.wraperAccademis {
+    width: 100%;
+    overflow: hidden;
+}
+.accdeminFieldLeft {
+    width: 50%;
+    float: left;
+}
+.rightImgDetails>.accdeminField{
+	margin-left: 15px;
+	margin-bottom: 15px;
+    margin-top: 15px;
+}
+.accdeminImg {
+    width: 30%;
+    float: left;
+    height: 146px;
+}
+.accdeminDis {
+    width: 69%;
+    float: left;
+    padding-left: 15px;
+    box-sizing: border-box;
+	
+}
+h3.disHead {
+    color: #e38000;
+}
+p.disDetails {
+    margin: 0;
+    padding-right: 15px;
+}
+img {
+    height: 100%;
+    width: 100%;
+}
+/***Navigation****/
+.mainWraper {
+    border: 1px solid #d7d1d1;
+    width: 99.8%;
+}
+nav.navBar>ul {
+    width: 100%;
+    padding: 0px;
+
+}
+nav.navBar {
+        width: 100%;
+    float: right;
+    width: 70%;
+	text-align: right;
+}
+.mainWraper {
+    border: 1px solid #d7d1d1;
+    width: 99.8%;
+	    overflow: hidden;
+}
+nav.navBar li {
+    display: inline;
+	  border-left: 1px solid #ccc;
+        padding: 21px 15px;
+}
+nav.navBar li a {
+    cursor: pointer;
+	    padding: 17px 15px;
+		    color: #0073ac;
+	  
+}
+
+.logoWrap>img {
+    background: transparent;
+    width: 75px!important;
+}
+.logoWrap {
+    float: left;
+    width: 10%;
+    padding-left: 20px;
+}
+/*************/
+nav.navBarMob ul {
+    padding: 0;
+    margin: 0;
+	width:100%;
+}
+nav.navBarMob ul li a {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    background: #0073ac;
+	border: 1px solid #0273F6;
+}
+nav.navBarMob ul li {
+    text-align: center;
+}
+.resMobileNav {
+    width: 100%;
+	display:none;
+}
+.resNavIcon{
+	display:none;
+}
+/*********/
+a.icon {
+    padding: 4px 4px;
+}
+a.icon:hover {
+    padding: 4px 4px;
+	background:#c8c8c8;
+}
+/**iphone 7 **/
+@media only screen and (min-device-width:375px) and (max-device-width:667px){
+	.accdeminFieldLeft {
+    width: 100%;
+}
+.accdeminImg:first{
+	border-right:1px solid #ccc;
+}
+.disHead{
+	font-family: 'Hind', sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+    font-weight: 400;
+}
+p.disDetails, {
+	    font-family: 'Hind', sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+    font-weight: 400;
+	display: table-cell;
+}
+.rightImgDetails>.accdeminField{
+margin-left: 0px;
+}
+.accdeminImg {
+    width: 40%;
+}
+.accdeminDis {
+    width: 60%;
+ 
+    padding-left:5px;
+
+	
+}
+/*********/
+
+.navBar{
+	display:none;
+}
+.resNavIcon{
+	display:block;
+}
+}
+
+@media only screen and (min-device-width:412px) and (max-device-width:732px){
+.accdeminImg:first{
+	border-right:1px solid #ccc;
+}
+		.accdeminFieldLeft {
+    width: 100%;
+}
+p.disDetails, {
+	    font-family: 'Hind', sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+    font-weight: 400;
+	display: table-cell;
+}
+.rightImgDetails>.accdeminField{
+margin-left: 0px;
+}
+.accdeminImg {
+    width: 40%;
+}
+
+.accdeminDis {
+    width: 59%;
+ 
+    padding-left:5px;
+
+	
+}
+.navBar{
+	display:none;
+}
+.resNavIcon{
+	display:block;
+}
+}
+/******Side bar******/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	    opacity: 0.8;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

@@ -1,0 +1,206 @@
+<!DOCYTYPE html>
+<html>
+	<head>
+		<style>
+		body{
+			width:100%;
+			margin:0px;
+			padding:0px;
+		}
+		#myModal{
+			width:100%;
+			padding:40px 0px;
+		}
+		.modal-content{
+			    margin: 0 auto;
+				width: 80%;
+				border: 1px solid #ccc;
+		}
+		.reglbl{
+			text-align:center;
+		}
+			/** dialogl form css*/
+.formField {
+    line-height: 2;
+}
+.form-Wraper {
+    padding: 0 40px;
+}
+.formField.btn {
+    text-align: right;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.formField {
+    padding: 4px 0;
+}
+
+/**NEw For css**/
+
+.candidateField {
+    overflow: hidden;
+    width: 100%;
+}
+.candidateFieldlbl {
+    float: left;
+    width: 25%;
+}
+.candidateFieldtxt {
+    float: left;
+    width: 73%;
+    padding: 5px;
+}
+.txtField {
+    margin-bottom: 15;
+}
+.txtField>input,select {
+    line-height: 2;
+	width: 100%;
+}
+select{
+	height: 33px;
+}
+		</style>
+	</head>
+	<body>
+		<div id="myModal" class="modal">
+
+					  <!-- Modal content -->
+					  <div class="modal-content">
+						<span class="close">&times;</span>
+							<div class="innerContaint">
+								<div class="reglbl"><h3>Register Now</h3></div>
+								<form name="userForm" method="POST">
+									<div class="form-Wraper">
+										<div class="candidateField">
+											<div class="candidateFieldlbl">
+												<label>Candidate-Name</label>
+											</div>
+											<div class="candidateFieldtxt">
+												<div class="txtField">
+													<input type="text" name="fName" placeholder="First Name"/>
+												</div>
+												<div class="txtField">
+													<input type="text" name="mName" placeholder="Middle Name"/>
+												</div>
+												<div class="txtField">
+													<input type="text" name="lName" placeholder="Last Name"/>
+												</div>
+											</div>
+										</div>
+										<div class="candidateField">
+											<div class="candidateFieldlbl">
+												<label>Personal-Details</label>
+											</div>
+											<div class="candidateFieldtxt">
+												<div class="txtField">
+													<input type="date" name="dateofBirth" placeholder="Date Of Birth"/>
+												</div>
+												<div class="txtField">
+													<input type="radio" name="gender" value='Male'/>Male<input type="radio" name="gender" value='FeMale'/>FeMale
+												</div>
+												<div class="txtField" >
+													<select name='countryName'>
+														<option value=''>-- Country --</option>
+														<option value='Karanatak'>Karanatak</option>
+														<option value='Maharastra'>Maharastra</option>
+													</select>
+												</div>
+												<div class="txtField">
+													
+													<select name='stateName'>
+														<option value=''>-- state --</option>
+														<option value='Bengalore'>Bengalore</option>
+														<option value='Mangalore'>Mangalore</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										
+										<div class="formField btn" >
+										<button id="addUsers">Add</button>
+										</div>
+									</div>
+								</form>
+							</div>
+					  </div>
+					</div>
+			<script type="text/javascript">
+				var span = document.getElementsByClassName("close")[0];
+				var addUsers = document.getElementById('addUsers');
+					addUsers.onclick = function(e){
+						 e.preventDefault();
+						
+							if (window.opener != null && !window.opener.closed) {
+								var firstName = userForm.fName.value;
+								var middleName= userForm.mName.value;
+								var lastName = userForm.lName.value;
+								var dateOfBirth=userForm.dateofBirth.value;
+								var gender=userForm.gender.value;
+								var Country=userForm.countryName.value;
+								var state=userForm.stateName.value;
+								if(firstName !="" && middleName!="" && lastName!=""&& dateOfBirth!=""&& gender!=""&& Country!=""&& state!=''){
+									var TableRef = window.opener.document.getElementById('tablerefs');			
+					
+										var rows = document.createElement("tr");
+										var cell = document.createElement("td");
+										var cellText = document.createTextNode(firstName);
+										var cell1 = document.createElement("td");
+										var cellText1 = document.createTextNode(middleName);
+										var cell2 = document.createElement("td");
+										var cellText2 = document.createTextNode(lastName);
+										var cell3 = document.createElement("td");
+										var cellText3 = document.createTextNode(dateOfBirth);
+										var cell4 = document.createElement("td");
+										var cellText4 = document.createTextNode(gender);
+										var cell5 = document.createElement("td");
+										var cellText5 = document.createTextNode(Country);
+										var cell6 = document.createElement("td");
+										var cellText6 = document.createTextNode(state);
+										
+										 cell.appendChild(cellText);
+										 cell1.appendChild(cellText1);
+										 cell2.appendChild(cellText2);
+										 cell3.appendChild(cellText3);
+										 cell4.appendChild(cellText4);
+										 cell5.appendChild(cellText5);
+										 cell6.appendChild(cellText6);
+										 
+										 rows.appendChild(cell);
+										 rows.appendChild(cell1);
+										 rows.appendChild(cell2);
+										 rows.appendChild(cell3);
+										 rows.appendChild(cell4);
+										 rows.appendChild(cell5);
+										 rows.appendChild(cell6);
+										 
+										  TableRef.appendChild(rows);
+										  userForm.fName.value="";
+										  userForm.mName.value="";
+										  userForm.lName.value="";
+										  userForm.dateofBirth.value="";
+										  userForm.gender.value="";
+										  userForm.countryName.value="";
+										  userForm.stateName.value="";
+								}
+							}
+						window.close();
+					}
+					span.onclick = function() {
+						window.close();
+					}
+
+				
+			</script>
+	</body>
+</html>
